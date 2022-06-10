@@ -35,15 +35,17 @@ const libro4 = new book('Demian', 1919, 'Hermann Hesse', 'Honor')
 
 const book = [libro1, libro2, libro3, libro4]
 
-function filtrarPorAutor(libros, nombre_autor) //creo la funcion con el parametro que me retornara lo que busco
-const libros_autor = [] //array vacio para llenar con cada iteracion de la busqueda
+function filtrarPorAutor(libros, nombre_autor) { //creo la funcion con el parametro que me retornara lo que busco
+    const libros_autor = [] //array vacio para llenar con cada iteracion de la busqueda
 
-for (let libro of Libros) { //ciclo para recorrer y encontar el autor buscado
-    if (libro.autor == nombre_autor) {
-        libros_autor.push(libro)
-
+    for (let libro of Libros) { //ciclo para recorrer y encontrar el autor buscado
+        if (libro.autor == nombre_autor) {
+            libros_autor.push(libro)
+        }
 
     }
-
+    return libros_autor;
 
 }
+//filter para encontrar una propiedad
+/*return libros.filter(lib => lib.autor == nombre_autor)*/
